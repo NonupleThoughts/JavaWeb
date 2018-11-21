@@ -95,3 +95,13 @@
       </ul>
   </li>
 </ul>
+参考资料：
+<ol>
+  <li>
+    https://github.com/CheungChingYin/StudentManagementSystemByJSP<br>
+    https://blog.csdn.net/qq_33596978/article/details/80550829
+  </li>
+  <li>
+    https://www.cnblogs.com/xdp-gacl/p/4200090.html
+  </li>
+</ol>
