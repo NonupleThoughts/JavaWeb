@@ -105,3 +105,17 @@
     https://www.cnblogs.com/xdp-gacl/p/4200090.html
   </li>
 </ol>
+后续<br/>
+在了解反射之后，对数据库链接中的，Class.forName(driverClass)语句的作用产生了好奇，在该程序中将其注释掉并不影响数据库的连接与使用，于是想知道为什么要写这个语句
+
+[How does Class.forName() work?](https://stackoverflow.com/questions/4202252/how-does-class-forname-work)中来自[Bozho](https://stackoverflow.com/users/203907/bozho)的回答<br/>
+Class.forName(..) loads and initializes the target class. This in turn means that the static initializer blocks are invoked (code defined in static { .. }.<br/>
+If you look at, for example, MySQL's driver, in that static block the driver is registering itself: DriverManager.registerDriver(new Driver());<br/>
+You can omit the Class.forName(..) and register the driver yourself if you can "afford" the compile-time dependency on MySQL's driver.<br/>
+That said, it will rarely be relevant to use Class.forName(..) to initialize classes from your application, because compile-time dependency is not an issue there.
+Also note that Class.forName(..) is no longer required for JDBC since version 4. By using the service provider mechanism you can instruct the driver manager what to load by a system property.<br/>
+
+看来这个是之前版本的JDBC遗留下来的语句(Class.forName(driverClass)这个语句会加载driverClass的静态区域)
+
+另外还可以参考[Loading JDBC driver without Class.forName](https://stackoverflow.com/questions/13959202/loading-jdbc-driver-without-class-forname)
+
