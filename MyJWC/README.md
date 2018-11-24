@@ -8,6 +8,9 @@
   <li>课程成绩的录入与查看</li>
   <li>相关通知的下载</li>
 </ul>
+运行：<br/>
+配置好Java库，Eclipse Java EE IDE，MySQL数据库，Tomcat；之后创建Dynamic Web Project，将相应文件替换，刷新该项目，即可<br/>
+
 应用主要的相关技术：Java，JSP；少量的HTML，JS，servlet<br/>
 <ul>
   <li>
