@@ -121,7 +121,7 @@
   另外还可以参考[Loading JDBC driver without Class.forName](https://stackoverflow.com/questions/13959202/loading-jdbc-driver-without-class-forname)
   </li>
   <li>
-  关于request对象的getAttribute与getParameter方法<br/>getParameter用于获取客户端的数据，没有setParameter方法；getAttribute用于获取request内置对象的参数，getAttribute常用于服务器中页面之间的变量传递，在使用getAttribute之前需要先setAttribute。
+  关于request对象的getAttribute与getParameter方法<br/>getParameter用于获取客户端的数据，没有setParameter方法；getAttribute用于获取request内置对象的参数，getAttribute常用于服务器中页面之间的变量传递，在使用getAttribute之前往往需要先setAttribute。
   具体的可以找个例子试一试。
   </li>
 <ul>
